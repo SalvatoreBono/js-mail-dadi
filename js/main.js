@@ -7,15 +7,18 @@ btnSignIn.addEventListener("click", function () {
     const email = inputEmail.value;
     /* La variabile "emailFound" ti identifica se hai trovato la mail oppure no */
     let emailFound = false;
-    /* PROCEDIMENTO: "digito l'email", al click del btn,  le email in generale sono false (quindi viene stampato false) ma "SE" la email digitata è uguale  alla variabile "emailsAllowed" diventa Vera,  quindi stampa "email valida". praticamente la variabile "emailFound" è un identificativo che in automatico ti rende tutte le email sbagliate ma se è corretta cambia e diventa true */
+    /* PROCEDIMENTO: "digito l'email", al click del btn,  l'email in generale sono false (quindi viene stampato false) ma "SE" l'email digitata è uguale  alla variabile "emailsAllowed" diventa Vera,  quindi stampa "email valida". praticamente la variabile "emailFound" è un identificativo che in automatico ti rende tutte "l'email errate" ma se è corretta cambia e diventa true */
     for (let i = 0; i < emailsAllowed.length; i++) {
 
 
         if (email === emailsAllowed[i]) {
-            console.log("Email valida");
             emailFound = true;
         }
-
     }
-    console.log(emailFound);
+    if (emailFound === true) {
+        console.log("Email Valida")
+    }
+    else {
+        console.log("Email Errata")
+    }
 })
