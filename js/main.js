@@ -5,15 +5,15 @@ const btnSignIn = document.getElementById("input-btn");
 
 btnSignIn.addEventListener("click", function () {
     const email = inputEmail.value;
+    let emailFound = false;
     for (let i = 0; i < emailsAllowed.length; i++) {
 
 
         if (email === emailsAllowed[i]) {
             console.log("Email valida");
+            emailFound = true;
         }
 
     }
-    if (email != emailsAllowed) {
-        console.log("Email errata");
-    }
+    console.log(emailFound);
 })
