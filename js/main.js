@@ -16,9 +16,9 @@ btnSignIn.addEventListener("click", function () {
         }
     }
     if (emailFound === true) {
-        console.log("Email Valida")
+        console.log("Email Valida");
     }
     else {
-        console.log("Email Errata")
+        console.log("Email Errata");
     }
 })
